@@ -16,19 +16,30 @@ public class cal extends JFrame {
         ScriptEngineManager manager = new ScriptEngineManager();
         ScriptEngine engine = manager.getEngineByName("JavaScript");
         
+        JMenuBar menuBar = new JMenuBar();
+        JMenu menu01 = new JMenu("File");
+        JMenu menu02 = new JMenu("Edit");
+        JMenu menu03 = new JMenu("Help");
+        menuBar.add(menu01);
+        menuBar.add(menu02);
+        menuBar.add(menu03);
+        JMenuItem item01 = new JMenuItem("New");
+        JMenuItem item02 = new JMenuItem("Open");
+        menu01.add(item01);
+        menu01.add(item02);
+        setJMenuBar(menuBar);
+        setLayout(null);
+        setVisible(true);
 
 
-       
-        
         JPanel resultPanel = new JPanel();
         resultPanel.setBounds(360, 0, 40, 40);
         resultPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
         add(resultPanel);
         JLabel label01 = new JLabel("0");
         label01.setFont(new Font("함초롬돋음", Font.BOLD, 30));
-        //JLabel label02 = new JLabel();
         resultPanel.add(label01);
-        //resultPanel.add(label02);
+
 
         JPanel btPanel = new JPanel();
         btPanel.setBounds(0, 50, 400, 410);
